@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif ;
+    border: border-box;
+}
+
+.Navbar{
+    height: 60px;
+    background-color: #23252b;
+    color: white;
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-evenly;
+}
+
+.Nav-logo{
+    height: 50px;
+    width: 152px;
+}
+
+.logo{
+    background-image: url(animanga.png);
+    background-size: cover;
+    height: 50px;
+    width: 152px;
+}
+
+.Navbar p{
+    display: inline-block;
+    margin-left: 25px;
+    font-size: 0.85rem;
+    
+
+}
+
+.div2{
+    width: 70%;
+}
+
+.div3{
+    
+    display: flex;
+    
+}
+
+.searchbar{
+    margin-right: 10px;
+    border: #23252b;
+}
+
+.searchicon{
+    margin-right: 40px;
+}
+.bookmark{
+    margin-right: 40px;
+}
+.id{
+    margin-right: 10px;
+}
+
+.logo:hover{
+    background-color: black;
+    transition-duration:0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.Navbar p,
+.Navbar select,
+.searchbar,
+.searchicon,
+.bookmark,
+.id  {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.Navbar p:hover,
+.Navbar select:hover,
+.searchicon:hover,
+.bookmark:hover,
+.id:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.categories{
+    background-color: #23252b;
+    color: white;
+    border: none;
+}
+.News{
+    background-color: #23252b;
+    color: white;
+    border: none;
+}
+.premium {
+    position: absolute;
+    right: 150px;
+    top: 60px; /* Just below the search bar */
+    width: 250px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(-10px); /* Move it up slightly */
+}
+
+.searchbar:hover + .premium {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Moves to normal position */
+}
+
+.hero-section{
+    background-image: url(vs.jpg);
+    background-size: cover;
+    height: 1080px;
+    width: 1920px;
+}
+
+@keyframes slideshow {
+    0% { background-image: url('vs.jpg'); }
+    33% { background-image: url('bleach.jpg'); }
+    66% { background-image: url('berserk.jpg'); }
+    100% { background-image: url('naruto.jpg'); }
+}
+
+.hero-section {
+    width: 100%;
+    height: 1000px;
+    top:10px;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 12s infinite;
+}
+@keyframes fadeSlide {
+    0% { opacity: 0; transform: translateX(-20px); }
+    10% { opacity: 1; transform: translateX(0); }
+    25% { opacity: 1; }
+    35% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 0; }
+}
+
+.hero-section p {
+    position: absolute;
+    bottom: 50px; /* Distance from the bottom */
+    right: 50px; /* Distance from the right */
+    width: 400px;
+    opacity: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* Ensures visibility on darker backgrounds */
+    background-color: rgb(0, 0, 0); /* Optional: Adds a semi-transparent background */
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    animation: fadeSlide 12s infinite;
+}
+
+
+
+.hero-section p:nth-child(1) { animation-delay: 0s; }
+.hero-section p:nth-child(2) { animation-delay: 3s; }
+.hero-section p:nth-child(3) { animation-delay: 6s; }
+.hero-section p:nth-child(4) { animation-delay: 9s; }
+
+.Shows {
+    height: 1100px; /* Adjust height */
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: flex-start; /* Fix typo "centre" to "center" */
+    align-items: flex-start;
+    position: relative;
+    margin-top: -300px; /* Adjust this to make sure it's right below */
+    z-index: 1; /* Ensures it's not overlapping */
+    box-shadow: 0px -20px 30px rgba(0, 0, 0, 4);
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    padding: 50px 0; /* Add spacing */
+}
+
+.heading1{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    
+    width: 100%;
+    height: 90px;
+}
+
+.heading2{
+    background-color: rgb(0, 0, 0);
+    margin-top: 100px;
+    margin-left: -100px;
+    color: aliceblue;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    width: 100%;
+    height: 90px;
+}
+
+.anime{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 120px;
+    width: 100%;
+}
+
+.box{
+    margin-top: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    height: 300px;
+    width: 200px;
+    cursor: pointer;
+
+}
+
+#box1{
+    background-image: url(shippuden.jpeg) ;
+    background-size: cover;
+}
+#box2{
+    background-image: url(onepiece.jpg) ;
+    background-size: cover;
+}
+#box3{
+    background-image: url(fmab.jpeg) ;
+    background-size: cover;
+}
+#box4{
+    background-image: url(HXH.jpeg) ;
+    background-size: cover;
+}
+#box5{
+    background-image: url(jojo.jpeg) ;
+    background-size: cover;
+}
+
+#manga1 {
+    border: 2px solid white;
+}
+#manga2 {
+    border: 2px solid white;
+}
+#manga3 {
+    border: 2px solid white;
+}
+#manga4 {
+    border: 2px solid white;
+}
+#manga5 {
+    border: 2px solid white;
+}
+
+
+
+
+.manga {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px;
+    justify-content: center;
+}
+
+/* Manga Images */
+#manga1 { background-image: url(Berserk.png); background-size: cover; }
+#manga2 { background-image: url(gnpp.jpg); background-size: cover; }
+#manga3 { background-image: url(kingdom.png); background-size: cover; }
+#manga4 { background-image: url(opm.png); background-size: cover; }
+#manga5 { background-image: url(vagabond.png); background-size: cover; }
+
+.titles{
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for readability */
+    color: white;
+    display: flex;
+    height: 30px;
+    justify-content: space-evenly;
+    font-size: 16px;
+    width: 100%;
+    gap: 120px;
+    cursor: pointer;
+}
+
+.titles .box{
+    display: flex;
+    justify-content: flex-start;
+}
+.titles .box:hover{
+    display: flex;
+    justify-content: flex-start;
+    color: orange;
+}
+
+.mtitle{
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for readability */
+    color: white;
+    display: flex;
+    height: 20px;
+    justify-content: space-evenly;
+    font-size: 16px;
+    width: 100%;
+    gap: 120px;
+    cursor: pointer;
+}
+.mtitle .box{
+    display: flex;
+    justify-content: center;
+    height: 10px;
+    width: 100%;
+}
+.mtitle .box:hover{
+    display: flex;
+    justify-content: center;
+    color: orange;
+}
+
+.footer {
+    background-color: #23252b;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    width: 30%;
+    padding: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid orange;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: orange;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: orange;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid white;
+    padding-top: 10px;
+    font-size: 14px;
+}

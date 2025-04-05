@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animanga</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Navbar">
+        <div class="Nav-logo">
+            <div class="logo">
+            </div>
+        </div>
+        <div class="div2">
+            <p class="new">New</p>
+            <p>Popular</p>
+            <p>Simulcast</p>
+            <select class="categories">
+                <option value="Categories">Categories</option>
+                <option value="Browse All (A-Z)">Browse All (A-Z)</option>
+                <option value="Release Calender">Release Calender</option>
+                <option value="Music Videos">Music Videos And Concerts</option>
+            </select>
+            |
+            <p>Games</p>
+            <select class="News">
+                <option value="News">News</option>
+                <option value="All News">All News</option>
+                <option value="Anime & Awards">Anime & Awards</option>
+                <option value="Manga">Manga</option>
+            </select>
+        </div>
+
+        <div class="div3">
+            <input placeholder="Search Anime Or Manga" class="searchbar">
+            <div class="premium">
+                <p>
+                    <i class="fa-solid fa-crown"></i>
+                    7 Day Free Trial!!<br>
+                    Premium access includes unlimited Anime and Manga Without Ads, and new Episodes and Chapter Shortly
+                    after they air in Japan. Try it NOW!
+                </p>
+            </div>
+            <div class="searchicon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="bookmark">
+                <i class="fa-solid fa-bookmark"></i>
+            </div>
+            <div class="id">
+                <i class="fa-regular fa-id-badge"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-section" id="hero-section">
+        <p><i class="fa-solid fa-play"></i>Vinland Saga: Start Episode 1<i class="fa-solid fa-download"></i></p>
+        <p><i class="fa-solid fa-play"></i>Bleach: Start Episode 1<i class="fa-solid fa-download"></i></p>
+        <p><i class="fa-solid fa-play"></i>Berserk: Start Chapter 1<i class="fa-solid fa-download"></i></p>
+        <p><i class="fa-solid fa-play"></i>Dragon Ball: Start Episode 1<i class="fa-solid fa-download"></i></p>
+    </div>
+
+    <script>
+        const images = [
+            "vs.jpg",
+            "bleach.jpg",
+            "berserk.jpg",
+            "dragonball.jpg"
+        ];
+
+        let index = 0;
+        const heroSection = document.getElementById("hero-section");
+
+        function changeImage() {
+            heroSection.style.backgroundImage = `url('${images[index]}')`;
+            heroSection.style.backgroundSize = "cover";
+            heroSection.style.backgroundPosition = "center";
+            index = (index + 1) % images.length;
+        }
+
+        setInterval(changeImage, 3000);
+        changeImage();
+    </script>
+
+    <div class="Shows">
+        <div class="anime-section">
+            <div class="heading1">Popular Anime</div>
+            <div class="anime">
+                <div class="box" id="box1"></div>
+                <div class="box" id="box2"></div>
+                <div class="box" id="box3"></div>
+                <div class="box" id="box4"></div>
+                <div class="box" id="box5"></div>
+            </div>
+        </div>
+        <div class="titles">
+            <div class="box">
+                <p>Naruto</p>
+            </div>
+            <div class="box">
+                <p>One Piece</p>
+            </div>
+            <div class="box">
+                <p>FullMetal Alchemist: Brotherhood</p>
+            </div>
+            <div class="box">
+                <p>HunterXHunter</p>
+            </div>
+            <div class="box">
+                <p>JoJo's Bizarre Adventure</p>
+            </div>
+        </div>
+
+        <div class="manga-section">
+            <div class="heading2"><pre>       Popular Manga</pre></div>
+            <div class="manga">
+                <div class="box" id="manga1"></div>
+                <div class="box" id="manga2"></div>
+                <div class="box" id="manga3"></div>
+                <div class="box" id="manga4"></div>
+                <div class="box" id="manga5"></div>
+            </div>
+            <div class="mtitle">
+                <div class="box">
+                    <p>Berserk</p>
+                </div>
+                <div class="box">
+                    <p>Goodnight PunPun</p>
+                </div>
+                <div class="box">
+                    <p>Kingdom</p>
+                </div>
+                <div class="box">
+                    <p>One Punch Man</p>
+                </div>
+                <div class="box">
+                    <p>Vagabond</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Animanga is your go-to platform for anime and manga news, reviews, and recommendations.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Simulcast</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Animanga. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
